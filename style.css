@@ -270,3 +270,24 @@ footer {
 .back-button:hover {
     background-color: #0056b3;
 }
+.floating-back-button {
+    position: fixed;
+    bottom: 20px;    /* Odległość od dołu */
+    left: 20px;      /* Odległość od lewej (możesz zmienić na right: 20px) */
+    z-index: 1000;   /* Gwarantuje, że przycisk będzie nad ramką iframe */
+    
+    padding: 12px 20px;
+    background-color: #007bff; /* Możesz zmienić na kolor swojej marki */
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;       /* Zaokrąglone rogi dla efektu "pigułki" */
+    font-weight: bold;
+    font-family: sans-serif;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* Cień, żeby przycisk był widoczny */
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.floating-back-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);    /* Delikatne powiększenie przy najechaniu */
+}
