@@ -3,21 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strona z iframe</title>
-    <link rel="stylesheet" href="style.css">
+    <title>TechNova - Innowacyjne Rozwiązania</title>
+    <style>
+        /* RESET I PODSTAWOWE STYLE */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f9;
+            line-height: 1.6;
+        }
+
+        /* STYLIZACJA MENU NAWIGACYJNEGO */
+        .navbar {
+            background-color: #2c3e50; /* Ciemny elegancki kolor */
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: sticky; /* Menu zostaje na górze podczas przewijania */
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            width: 90%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-item {
+            margin-left: 20px;
+        }
+
+        .nav-link {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        /* Efekt najechania na przycisk */
+        .nav-link:hover {
+            color: #3498db;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Styl dla sekcji głównej (Content) */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        /* RESPONSYWNOŚĆ (Dla telefonów) */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+            }
+            .navbar {
+                height: auto;
+                padding: 15px 0;
+            }
+            .nav-menu {
+                margin-top: 15px;
+            }
+            .nav-item {
+                margin: 0 5px;
+            }
+            .nav-link {
+                font-size: 14px;
+                padding: 8px 10px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <a href="https://technova-pl.github.io/technova-web" class="floating-back-button">
-        &larr; Powrót
-    </a>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="https://technova-pl.github.io/technova-web" class="logo">TechNova GitHub</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="https://technova-pl.github.io/technova-web" class="nav-link">Strona główna</a>
+                </li>
+                <li class="nav-item">
+                    <a href="o-nas.html" class="nav-link">O nas</a>
+                </li>
+                <li class="nav-item">
+                    <a href="projekty.html" class="nav-link">Projekty</a>
+                </li>
+                <li class="nav-item">
+                    <a href="zespol.html" class="nav-link">Zespół</a>
+                </li>
+                <li class="nav-item">
+                    <a href="kontakt.html" class="nav-link">Kontakt</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-    <iframe 
-        src="https://technova-github.blogspot.com" 
-        width="100%" 
-        height="800px" 
-        frameborder="0">
-    </iframe>
+    <header class="hero">
+        <h1>Witaj w TechNova</h1>
+        <p>Tworzymy przyszłość technologii. Wybierz sekcję z menu powyżej, aby dowiedzieć się więcej.</p>
+    </header>
 
 </body>
 </html>
